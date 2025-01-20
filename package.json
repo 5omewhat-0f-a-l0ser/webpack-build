@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && webpack --mode production",
+    "dev": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,14 @@
   "homepage": "https://github.com/5omewhat-0f-a-l0ser/webpack-build#readme",
   "description": "",
   "devDependencies": {
-    "webpack": "5.76.0"
+    "@babel/core": "7.18.9",
+    "@babel/preset-env": "7.18.9",
+    "babel-loader": "8.2.5",
+    "webpack": "5.76.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.9.3"
+  },
+  "dependencies": {
+    "core-js": "3.23.5"
   }
 }
