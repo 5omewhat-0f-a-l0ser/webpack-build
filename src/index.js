@@ -1,3 +1,9 @@
+import "./pages/index.css";
+import stepsSrc from "./images/steps.png";
+
+const stepsImage = document.getElementById("image-steps");
+stepsImage.src = stepsSrc;
+
 console.log("Hello, World!");
 
 const numbers = [2, 3, 5];
