@@ -19,7 +19,7 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, "./dist"),
     compress: true,
-    port: 8081,
+    port: 8080,
     open: true,
     liveReload: true,
     hot: false,
@@ -38,16 +38,17 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
+            options: {                // Add an options object
+              importLoaders: 1,
+            },
           },
+          "postcss-loader",          // Add the postcss loader
         ],
       },
-      
-      // NEW
       {
-        test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
+        test: /\.(png|svg|jpg|jpeg|gif|woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",
       },
-
     ],
   },
   plugins: [
@@ -57,5 +58,4 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
-
 };

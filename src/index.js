@@ -1,5 +1,5 @@
 import "./pages/index.css";
-import stepsSrc from "./images/steps.png";
+import stepsSrc from "../images/steps.png";
 
 const stepsImage = document.getElementById("image-steps");
 stepsImage.src = stepsSrc;
